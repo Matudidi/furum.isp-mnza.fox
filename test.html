@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="SOCIAL BOOK/styel.css">
+    <link rel="stylesheet" href="blog/styl.css">
+    npm install tailwindcss @tailwindcss/forms @tailwindcss/typography postcss postcss-nesting autoprefixer --save-dev
+    <style>
+        body{
+            padding: 40px;
+            text-transform: capitalize;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: rgb(65, 66, 66);
+        }
+        .wrapper{
+            display: grid;
+            grid-auto-flow: column;
+            gap: .5rem;
+            overflow: auto;
+            padding: 1rem;
+            
+        }
+
+        .wrapper img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            border: 2px solid rgb(226, 224, 224);
+        }
+
+        .profil-phots{
+            border-radius: 1rem;
+            padding: 1rem;
+            height: 10rem;
+            width: 10rem;
+            background-color: rgb(95, 98, 100);
+            display: flex;
+            align-items: center;
+            color: aliceblue;
+        }
+
+        .profil-phots .detail{
+            display: block;
+            padding-left: 1rem;
+        }
+
+        .coeur{
+            position:relative;
+        }
+
+        .coeur::before,
+        .coeur::after{
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 80px;
+            background-color: aqua;
+            border-radius: 40px 40px 0 0 ;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="contenair">
+
+        
+
+
+        <div class="wrapper">
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots" >
+                <img src="" alt="">
+                <div class="detail">
+                    <h5>illustrate maza</h5>
+                    <small>date creation</small>
+                </div>
+            </div>
+            <div class="profil-phots">
+                
+                <div class="detail">
+                    <a href=""><h5>illustrate maza</h5></a>
+                    <small>date creation</small>
+                    <input type="password" name="validerPost" id="">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="jeux">
+        <div class="infos-request">
+            <div class="profile-phots">
+                <img src="IMAGE-COMPTE/fille1.jpg" alt="">
+            </div>
+            <div class="requet-body">
+                <h5>yansmine kuama</h5>
+                <p class="text-gray">3minutes passées</p>
+            </div>
+        </div>
+
+        <div class="contenairEcireMessage">
+
+        </div>
+        <input type="text">
+        <button bnt bnt-primary>envoyer</button>
+    </div>
+
+    $db = new PDO('sqlite:mysqlitedb.db');
+$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+$sql = "SELECT * FROM users WHERE user_name = :name AND user_password = :pass";
+$statement = $db->prepare($sql);
+$statement->execute(array('name' => $username, 'pass' => $password));
+
+try {
+    $statement = $db->prepare($sql);
+    $statement->execute(array('name' => $username, 'pass' => $password));
+
+    foreach ($statement as $row);
+
+    if ($row['user_name'] == $username && $row['user_password'] == $password){
+        echo "Welcome " .$row['user_name']. ", You are now logged in.<br/ >";
+    }else{
+        echo "User Name or Password is invalid";
+    }  
+}
+catch(PDOException $e) {
+    echo "Something went wrong: ".$e->getMessage();
+}
+</html>
+
+SELECT userstable.firstname, userstable.lastname, publicationstable.contenu_publication
+FROM userstable, publicationstable
+
+WHERE publicationstable.id_user = userstable.id_user
+
+
+SELECT 
+		commentairestable.contenu_commentaire,
+		publicationstable.contenu_publication,
+		userstable.firstname,
+		userstable.lastname
+FROM	
+		userstable, 
+		commentairestable,
+		publicationstable
+WHERE
+		commentairestable.id_publication = publicationstable.contenu_publication
+
+
+        <div class="tout-commnteres">
+            <?php foreach ($maniPulation as $commeentManip): ?>
+                <div class="notif" id="notificat-js-count">
+                    <div class="profil">
+                        <img src="IMAGE-COMPTE/kandinsky.png" alt="" class="profile-phots">
+                    </div>
+                    <div class="notification-body">
+                        <b><?= $commeentManip->lastname ?></b> <?= $commeentManip->contenu_commentaire ?>
+                        <small class="text-gray">il y a 1 semaine </small>
+                    </div>
+                </div>
+                <?php endforeach?>
+            </div>
+
+            SELECT userstable.firstname, userstable.gmail, publicationstable.contenu_publication
+FROM userstable, publicationstable
+WHERE publicationstable.id_user = userstable.id_user
+
+
+SELECT *FROM publicationstable 
+
+WHERE publicationstable.id_user ='5'
+<div class="coeur"></div>
+
+<div class="fied">
+    <div class="head">
+        <div class="user">
+            <div class="profile-phots">
+                <img src="IMAGE-COMPTE/fille1.jpg" alt="">
+            </div>
+            <div class="info">
+                <h3>maria montessori</h3>
+                <small>kinshasa, 2minutes</small>
+            </div>
+        </div>
+        <span class="edit">
+            <img src="ICONS-LOGO/3917075.png" alt="" class="icon1">
+        </span>
+    </div>
+    
+    <div class="feed-phots">
+        <img src="IMAGE-COMPTE/fille2.jpg" alt="">
+    </div>
+
+    
+
+    <div class="commenter-by">
+        <span><img src="IMAGE-COMPTE/fille1.jpg" alt=""></span>
+        <span><img src="IMAGE-COMPTE/s1200.jpg" alt=""></span>
+        <span><img src="IMAGE-COMPTE/of4.jpg" alt=""></span>
+        <p>commenté par  <b>manza illustrate</b> et <b>30 autres boutiques</b></p>
+        
+    </div>
+    <div class="caption">
+        <div class="hash-tag">
+            <b>maria</b>
+            <label for="">c'est tres cool</label>
+        </div>
+            
+        <div class="voir-comnts">
+            voir tout les commentaires
+        </div>
+        
+    </div>
+    <div class="tout-commnteres">
+        <div class="notif" id="notificat-js-count">
+            <div class="profil">
+                <img src="IMAGE-COMPTE/kandinsky.png" alt="" class="profile-phots">
+            </div>
+            <div class="notification-body">
+                <b>precieuse</b> a commenter votre produit
+                <small class="text-gray">il y a 1 semaine </small>
+            </div>
+        </div>
+        <div class="notif" id="notificat-js-count">
+            <div class="profil">
+                <img src="IMAGE-COMPTE/kandinsky.png" alt="" class="profile-phots">
+            </div>
+            <div class="notification-body">
+                <b>precieuse</b> a commenter votre produit
+                <small class="text-gray">il y a 1 semaine </small>
+            </div>
+        </div>
+    </div>
+    
+    <div class="commenter">
+        <input type="text" placeholder="commenter">
+        <img src="ICONS-LOGO/3916869.png" alt="" class="icon1">
+    </div>  
+
+</div>
+<div class="fied">
+    <div class="head">
+        <div class="user">
+            <div class="profile-phots">
+                <img src="IMAGE-COMPTE/fille1.jpg" alt="">
+            </div>
+            <div class="info">
+                <h3>precieuse makiese</h3>
+                <small>kinshasa, 10 minutes</small>
+            </div>
+        </div>
+        <span class="edit">
+            <img src="ICONS-LOGO/3917075.png" alt="" class="icon1">
+        </span>
+    </div>
+    
+    <div class="feed-phots">
+    <img src="IMAGE-COMPTE/paysage2.jpg" alt="">
+    </div>
+    
+    <div class="commenter-by">
+        <span><img src="IMAGE-COMPTE/fille1.jpg" alt=""></span>
+        <span><img src="IMAGE-COMPTE/s1200.jpg" alt=""></span>
+        <span><img src="IMAGE-COMPTE/of4.jpg" alt=""></span>
+        <p>commenté par  <b>manza illustrate</b> et <b>30 autres boutiques</b></p>
+        
+    </div>
+    <div class="caption">
+        <div class="hash-tag">
+            <b>maria</b>
+            <label for="">c'est tres cool</label>
+        </div>
+            
+        <div class="voir-comnts">
+            voir tout les commentaires
+        </div>
+        
+    </div>
+    <div class="tout-commnteres">
+        <div class="notif" id="notificat-js-count">
+            <div class="profil">
+                <img src="IMAGE-COMPTE/kandinsky.png" alt="" class="profile-phots">
+            </div>
+            <div class="notification-body">
+                <b>precieuse</b> a commenter votre produit
+                <small class="text-gray">il y a 1 semaine </small>
+            </div>
+        </div>
+    </div>
+    
+    <div class="commenter">
+        <input type="text" placeholder="commenter">
+        
+    </div>  
+    <img src="ICONS-LOGO/3916869.png" alt="image" class="icon1">
+
+</div>
+
+
+
+REQUETTE POUR commentaires
+<?php   
+                        
+$connectionDatabase = new PDO('sqlite:forumdb.sql',null, null, [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
+    ]);
+
+    $idProteger =$connectionDatabase->quote($_GET['id_user']);
+        //var_dump($idProteger);
+    $donneepersonnelRecuper  = $connectionDatabase->query(
+    'SELECT 
+            userstable.firstname,
+            userstable.lastname,
+            userstable.photo,
+            commentairestable.contenu_commentaire,
+            commentairestable.date_commentaire,
+            publicationstable.contenu_publication	
+    FROM	
+            userstable, 
+            commentairestable,
+            publicationstable
+    WHERE
+            commentairestable.id_publication = publicationstable.id_publication = userstable.id_user
+    ORDER BY publicationstable.id_publication   DESC
+       
+        ');
+
+
+        $maniPulation  = $donneepersonnelRecuper->fetchAll();
+?>
+
+https://www.iconsdb.com
+
+
+SELECT commentairestable.contenu_commentaire
+
+FROM commentairestable
+
+SELECT commentairestable.contenu_commentaire
+
+FROM commentairestable
+
+dorcaskimambu@gmail.com
+E0853966280
+
+
+<?php
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=u258251883_users', 'u258251883_users', 'JorisVideo2016');
+
+if(isset($_POST['forminscription'])) {
+    $pseudo = htmlspecialchars($_POST['pseudo']);
+    $mail = htmlspecialchars($_POST['mail']);
+    $mail2 = htmlspecialchars($_POST['mail2']);
+    $mdp = sha1($_POST['mdp']);
+    $mdp2 = sha1($_POST['mdp2']);
+    if(!empty($_POST['pseudo']) AND !empty($_POST['mail']) AND !empty($_POST['mail2']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2'])) {
+        $pseudolength = strlen($pseudo);
+        if($pseudolength <= 255) {
+            if($mail == $mail2) {
+                if(filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+                    $reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
+                    $reqmail->execute(array($mail));
+                    $mailexist = $reqmail->rowCount();
+                    if($mailexist == 0) {
+                        if($mdp == $mdp2) {
+                            $longueurKey = 15;
+                            $key = "";
+                            for($i=1;$i<$longueurKey;$i++) {
+                                $key .= mt_rand(0,9);
+                            }
+                            $insertmbr = $bdd->prepare("INSERT INTO membres(pseudo, mail, motdepasse, confirmkey, confirme) VALUES(?, ?, ?, ?, ?)");
+
+                            $insertmbr->execute(array($pseudo, $mail, $mdp, $key, uniqid()));
+
+                            $header="MIME-Version: 1.0\r\n";
+                            $header.='From:"Jorisvideo.fr"<support@jorisvideo.fr>'."\n";
+                            $header.='Content-Type:text/html; charset="uft-8"'."\n";
+                            $header.='Content-Transfer-Encoding: 8bit';
+                            $message='
+<html>
+<body>
+   <div align="center">
+      <a href="/confirmation.php?pseudo='.urlencode($pseudo).'&key='.$key.'">Confirmez votre compte !</a>
+   </div>
+</body>
+</html>
+';
+                            mail($mail, "Confirmation de compte", $message, $header);
+                            $erreur = "Votre compte a bien été créé ! <a href=\"connexion.php\">Me connecter</a>";
+                        } else {
+                            $erreur = "Vos mots de passes ne correspondent pas !";
+                        }
+                    } else {
+                        $erreur = "Adresse mail déjà utilisée !";
+                    }
+                } else {
+                    $erreur = "Votre adresse mail n'est pas valide !";
+                }
+            } else {
+                $erreur = "Vos adresses mail ne correspondent pas !";
+            }
+        } else {
+            $erreur = "Votre pseudo ne doit pas dépasser 255 caractères !";
+        }
+    } else {
+        $erreur = "Tous les champs doivent être complétés !";
+    }
+}
+?>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<div align="center">
+    <h2>Inscription</h2>
+    <br /><br />
+    <form method="POST" action="">
+        <table>
+            <tr>
+                <td align="right">
+                    <label for="pseudo">Pseudo :</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Votre pseudo" id="pseudo" name="pseudo" value="<?php if(isset($pseudo)) { echo $pseudo; } ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="mail">Mail :</label>
+                </td>
+                <td>
+                    <input type="email" placeholder="Votre mail" id="mail" name="mail" value="<?php if(isset($mail)) { echo $mail; } ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="mail2">Confirmation du mail :</label>
+                </td>
+                <td>
+                    <input type="email" placeholder="Confirmez votre mail" id="mail2" name="mail2" value="<?php if(isset($mail2)) { echo $mail2; } ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="mdp">Mot de passe :</label>
+                </td>
+                <td>
+                    <input type="password" placeholder="Votre mot de passe" id="mdp" name="mdp" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="mdp2">Confirmation du mot de passe :</label>
+                </td>
+                <td>
+                    <input type="password" placeholder="Confirmez votre mdp" id="mdp2" name="mdp2" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center">
+                    <br />
+                    <input type="submit" name="forminscription" value="Je m'inscris" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <?php
+    if(isset($erreur))
+    {
+        echo '<font color="red">'.$erreur."</font>";
+    }
+    ?>
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<?php
+    include_once'header.php';
+?>
+
+<body>
+    <?php
+        
+        include_once'connectBd.php';
+    
+        $idProteger =$connectionDatabase->quote($_GET['id_user']);
+        //var_dump($idProteger);
+        $donneepersonnelRecuper  = $connectionDatabase->query('SELECT *FROM userstable 
+            WHERE id_user = '. $_GET['id_user']
+        );
+        $manipulationPersonnel  = $donneepersonnelRecuper->fetch();
+
+        
+        
+    ?>
+<nav>    
+    <div class="contenair  nav-contenair">
+        <div class="logo">
+            <div>
+                <span>PROFIL</span>
+            </div>    
+        </div>
+        
+        <h4 class="plus_popup">+</h4>
+        <div class="create">
+        <H3><a href="profil.php?id_user= <?= $idProteger?>">VOIR EN TANT QUE</a></H3>
+                <img src="ICONS-LOGO/avatar3.png" alt="" class="icon1">
+            </div>   
+        </div>
+    </div>
+    </nav>
+    <!-- FIN DE L'ENTETE DE LA PAGE-->
+
+
+    
+
+<main>
+    <div class="contenair">
+    <?php  include_once'footer.php' ?>                    
+    </div>
+</main>
+
+</body>
+</html> 
+
+$gmail_user = $_POST['gmail'];
+        $passwork_user = $_POST['passwork'];
+        try {
+            
+            $sql = "SELECT *FROM userstable WHERE gmail = :gmail AND passwork = :passwork";
+            $statement = $connectionDatabase->prepare($sql);
+            $statement->execute([
+                'gmail' => $gmail_user,
+                'passwork' => $passwork_user
+            ]);
+
+            
+            try {
+                $statement = $connectionDatabase->prepare($sql);
+                $statement->execute([
+                    'gmail' => $gmail_user, 
+                    'passwork' => $passwork_user
+                ]);
+            
+                foreach ($statement as $row);
+            
+                if ($row['gmail'] == $gmail_user && $row['password'] == $passwork_user){
+                   
+                }else{
+                    echo "User Name or Password is invalid";
+                }  
+            }
+            catch(PDOException $e) {
+                echo "Something went wrong: ".$e->getMessage();
+            }
+            
+        } catch(PDOException $e) {
+            echo "Something went wrong: ".$e->getMessage();
+        }
+       
+
+
+<!-- SYSTEME D'INVITATION MESSAGES-->
+        <div class="firend-requets">
+            <h4>Invitations</h4>
+            <div class="requets">
+                <div class="infos-request">
+                    <div class="profile-phots">
+                        <img src="IMAGE-COMPTE/fille3.jpg" alt="">
+                    </div>
+                    <div class="requet-body">
+                        <h5>precieuse manza</h5>
+                        <p class="text-gray">3minutes passées</p>
+                    </div>
+                </div>
+                <div class="action">
+                    <button class="bnt bnt-primary" id="confirmer-invitation">confirmer</button>
+                    <button class="bnt " id="suprimer-invitation">suprimer</button>
+                </div>
+            </div>
+            <div class="requets">
+                <div class="infos-request">
+                    <div class="profile-phots">
+                        <img src="IMAGE-COMPTE/fille2.jpg" alt="">
+                    </div>
+                    <div class="requet-body">
+                        <h5>dorcas souria</h5>
+                        <p class="text-gray">3minutes passées</p>
+                    </div>
+                </div>
+                <div class="action">
+                    <button class="bnt bnt-primary" id="confirmer-invitation">confirmer</button>
+                    <button class="bnt " id="suprimer-invitation">suprimer</button>
+                </div>
+            </div>
+            <div class="requets">
+                <div class="infos-request">
+                    <div class="profile-phots">
+                        <img src="IMAGE-COMPTE/fille1.jpg" alt="">
+                    </div>
+                    <div class="requet-body">
+                        <h5>yansmine kuama</h5>
+                        <p class="text-gray">3minutes passées</p>
+                    </div>
+                </div>
+                <div class="action">
+                    <button class="bnt bnt-primary" id="confirmer-invitation">confirmer</button>
+                    <button class="bnt " id="suprimer-invitation">suprimer</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- MESQSQQQQQQQQAGE S-->
+
+        
+        <div class="message">
+            <div class="profile-phots">
+                <img src="IMAGE-COMPTE/1657c54893aba2b.jpg" alt="">
+            </div>
+            <div class="message-body">
+                <div class="en-ligne"></div>
+                <h5>illustrate manza</h5>
+                <p class="text-gray">je suis de retour peut </p>
+            </div>
+        </div>
+        <div class="message">
+            <div class="profile-phots">
+                <img src="IMAGE-COMPTE/paysage2.jpg" alt="">
+            </div>
+            <div class="message-body">
+                <h5>maria</h5>
+                <p class="text-gray">je suis de retour peut </p>
+            </div>
+        </div>
+        <div class="message">
+            <div class="profile-phots">
+                <img src="IMAGE-COMPTE/paysage1.jpg" alt="">
+            </div>
+            <div class="message-body">
+                <h5>chouga jolie</h5>
+                <p class="text-gray">quand tu sera dispo tu me fait signe </p>
+            </div>
+        </div>
+        <div class="message">
+            <div class="profile-phots">
+                <img src="IMAGE-COMPTE/mariage2.jpg" alt="">
+            </div>
+            <div class="message-body">
+                <h5>chanse sema</h5>
+                <p class="text-gray">je suis de retour peut </p>
+            </div>
+        </div>
+        <div class="message">
+            <div class="profile-phots">
+                <img src="IMAGE-COMPTE/mariage1.jpg" alt="">
+            </div>
+            <div class="message-body">
+                <div class="en-ligne"></div>
+                <h5>h' hermes</h5>
+                <p class="text-gray">je suis de retour peut </p>
+            </div>
+        </div>

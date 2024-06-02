@@ -1,0 +1,165 @@
+*{
+    list-style: none;
+}
+
+body{
+    background-color: rgb(70, 71, 73);
+    color: #fff;
+    padding: 30px 80px;
+    list-style: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+table{
+    background-color: rgb(86, 86, 87);
+    padding: 1rem;
+    overflow: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem aqua;
+}
+
+th{ 
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+td{
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+tr:hover{
+    background-color: rgb(122, 122, 124);
+    transition: 2s ease all;
+    border: none;
+}
+
+a{
+    color: rgb(242, 243, 250);
+    text-decoration: none;    
+}
+p{
+    padding: 1rem;
+}
+
+.nomUsers{
+
+    background-color: rgb(37, 35, 46);
+    position: relative;
+    width: 25%;
+}
+
+.lastnameusers{
+    background-color: rgb(37, 35, 46);
+    position: relative;
+    width: 25%;
+}
+.gmailusers{
+    background-color: rgb(37, 35, 46);
+    position: relative;
+    width: 30%;
+}
+
+.idusers{
+    background-color: rgb(37, 35, 46);
+    
+}
+
+.wrapper{
+    display: grid;
+    grid-auto-flow: column;
+    gap: .5rem;
+    overflow: auto;
+    padding: 1rem;
+    
+}
+
+.wrapper img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 2px solid rgb(226, 224, 224);
+    background-color: #1c598b;
+}
+
+.profil-phots{
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(95, 98, 100);
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    border: 2px solid rgb(95, 98, 100);
+    
+}
+
+.jsStyle{
+    box-shadow: 0 0 1rem aqua;
+}
+
+.profil-phots:hover{
+    border: 2px solid  #1c598b;
+    transition: 1s all ease;
+}
+
+.profil-phots .detail{
+    
+    padding-left: 1rem;
+}
+
+.contenair{
+    background-color: rgb(86, 86, 87);
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+.recherClient{
+    margin-top: 2.5rem;
+    padding: 1rem;
+    position: relative;
+    background-color: rgb(86, 86, 87);
+    margin-bottom: 2rem;
+    width: 27%;
+    border-radius: 1rem;
+}
+
+.recherClient input{
+    padding: .7rem;
+    background-color: transparent;
+    outline: none;
+    border: #fff 1px solid;
+    color: #fff;
+    font-size: 14px;
+}
+
+.recherClient button{
+    position: relative;
+    padding: .7rem 1.1rem;
+    background: linear-gradient(aqua, blue, aqua);
+    outline: none;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    right: 0;
+}
+
+.head-entete{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(44, 43, 43);
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 1;
+}
+
+.head-entete .light{
+    display: flex;
+    justify-content: space-between;
+}

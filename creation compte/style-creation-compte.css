@@ -1,0 +1,195 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+:root{
+    --color-white: #42414d;
+    --color-light: #1c1b22;
+    --color-gray: hsl(252, 15, 65%);
+    --color-primary: hsl(210, 94%, 37%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 50%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-dark: hsl(252, 30%, 10%);
+
+    --bnt-padding: .9rem 2rem;
+    --border-radius: 1rem;
+    --card-border-radius: 1.2rem;
+    --search-padding: .6rem 2rem;
+    --card-padding: 1.8rem 3rem;
+
+    --stk-top-left: 5.4rem;
+    --stk-top-right: -18rem;
+}
+
+body{
+    color: #FFFFFF;
+    background-color: var(--color-light);
+ 
+}
+
+.bnt{
+    padding: var(--bnt-padding);
+    display: inline-block;
+    font-weight: 500;
+    font-size: .9rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.bnt:hover{
+    opacity: .8;
+}
+
+.bnt-primary{
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+.bnt-dander{
+    background-color: var(--color-danger);
+    color: #FFFFFF;
+}
+
+.text-blod{
+    font-weight: bold;
+}
+
+.text-gray{
+    color: var(--color-gray);
+}
+a:hover{
+    color: var(--color-primary);
+}
+
+
+
+.contenair-creat-compte{
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: 2rem;
+    height: min-content;
+    width: 44%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border: 1px solid hsl(0, 0%, 0%); 
+    box-shadow: 0 0 1rem hsl(0, 0%, 0%); 
+}
+
+.contenair-creat-compte .head{
+    text-align: justify;
+    margin-bottom: .8rem;
+}
+.contenair-creat-compte .head h2{
+    text-transform:capitalize;
+    text-align: center;
+    text-shadow: var(--color-primary) 0  .1rem 0;
+    font-size: x-large;
+    margin-bottom: 2rem;
+}   
+
+hr{
+    margin-bottom: 1.6rem;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+}
+.contenair-creat-compte input{
+    font-size: 15px;
+    outline: none;
+    padding: var(--bnt-padding);
+    background-color: transparent;
+    color: var(--color-gray);
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--color-light);
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.contenair-creat-compte input:hover{
+    border: 1px solid #FFFFFF;
+    transition: 1s all ease-in-out;
+}
+
+.contenair-creat-compte input::placeholder{
+    color: #FFFFFF;
+    font-size: .8rem;
+    font-family: monospace;
+}
+
+.contenair-creat-compte input:last-child{
+    background-color: var(--color-primary);
+    border: none;
+    text-transform: uppercase;
+    transition: 1s all ease-in-out;
+    width: auto;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+.contenair-creat-compte input:last-child:hover{
+    background-color: var(--color-success);
+}
+
+.contenair-creat-compte a{
+    color: var(--color-gray);
+    text-transform: none;
+    font-family: monospace;
+}
+
+/****************************/
+
+.contenair-creat-compte #profil-photo{
+    display: none;
+}
+
+.contenair-creat-compte .cont-photo{
+    background-color: var(--color-light);
+    height: 11rem;
+    width: 10rem;
+    text-align: center;
+    padding: var(--bnt-padding);
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-dark);
+    border-radius: var(--card-border-radius);
+    cursor: pointer;
+}
+
+.info-cret-compt{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media(max-width: 700px){
+    .contenair-creat-compte{
+        background-color: var(--color-white);
+        padding: 1.5rem;
+        border-radius: var(--card-border-radius);
+        height: max-content;
+        width: 98%;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        border: 1px solid hsl(0, 0%, 4%);
+        box-shadow: 0 0  1rem hsl(0, 0%, 4%); 
+    }
+    
+}
